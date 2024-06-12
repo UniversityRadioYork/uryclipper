@@ -1,1 +1,44 @@
-<h1>yo</h1>
+<!DOCTYPE html> <title>uryclip</title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+/>
+<body>
+<div>
+    <br>
+    <div id="logo">
+        <img src="{{ url_for('static', filename='images/uryclipper.png') }}">
+    </div>
+	<div id="timeSelector">
+		<input type="date" id="dateInput" required />
+		<input type="time" id="startInput" required step="2" />
+		<input type="time" id="endInput" required step="2" />
+		<button id="load">Load Section</button>
+	</div>
+	<div id="clipper" style="display: none">
+		<div id="waveform"></div>
+		<input type="time" id="startClip" required />
+		<button id="setStart">Set Start</button>
+		<input type="time" id="endClip" required />
+		<button id="setEnd">Set End</button>
+		<button id="export">Clip!</button>
+	</div>
+	<div id="exporter" style="display: none">
+		<div id="clipWaveform"></div>
+		<a href="" id="download" download>
+			<button>Download</button>
+		</a>
+	</div>
+	<div id="loading" style="display: none">
+		<h2>LOADING...</h2>
+	</div>
+	<div id="error" style="display: none">
+		<h2>ERROR</h2>
+	</div>
+</div>
+	<script
+		src="{{ url_for('static', filename='main.js') }}"
+		type="module"
+	></script>
+</div>
+</body>
