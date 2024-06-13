@@ -90,7 +90,7 @@ function makeClip(key, start, end, date) {
 			return response.json();
 		})
 		.then((data) => {
-			wavesurfer.load("/getaudio/" + key);
+			wavesurfer.load("/getaudio/" + key + "/");
 		})
 		.catch((error) => {
 			document.getElementById("clipper").style.display = "none";
