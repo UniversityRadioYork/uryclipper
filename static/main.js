@@ -170,7 +170,7 @@ document.getElementById("export").addEventListener("click", async () => {
 				return response.json();
 			})
 			.then((data) => {
-				clipsurfer.load("/getclip/" + currentKey);
+				clipsurfer.load("/getclip/" + currentKey + "/");
 				wavesurfer.pause();
 				document.getElementById("download").href =
 					"/getclip/" + currentKey;
