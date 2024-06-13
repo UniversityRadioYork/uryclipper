@@ -90,7 +90,7 @@ function makeClip(key, start, end, date) {
 			return response.json();
 		})
 		.then((data) => {
-			wavesurfer.load("/getaudio/" + key);
+			wavesurfer.load("/getaudio/" + key + "/");
 		})
 		.catch((error) => {
 			document.getElementById("clipper").style.display = "none";
@@ -170,7 +170,7 @@ document.getElementById("export").addEventListener("click", async () => {
 				return response.json();
 			})
 			.then((data) => {
-				clipsurfer.load("/getclip/" + currentKey);
+				clipsurfer.load("/getclip/" + currentKey + "/");
 				wavesurfer.pause();
 				document.getElementById("download").href =
 					"/getclip/" + currentKey;
