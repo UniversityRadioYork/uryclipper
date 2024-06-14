@@ -1,6 +1,6 @@
 import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
 
-let defaultClip = 5;
+let defaultClip = 2;
 let keyLength = 32;
 let longest = 3600;
 
@@ -173,7 +173,7 @@ document.getElementById("export").addEventListener("click", async () => {
 				clipsurfer.load("/getclip/" + currentKey + "/");
 				wavesurfer.pause();
 				document.getElementById("download").href =
-					"/getclip/" + currentKey;
+					"/getclip/" + currentKey + "/";
 				document.getElementById("exporter").style.display = "block";
 				document.getElementById("loading").style.display = "none";
 			})
