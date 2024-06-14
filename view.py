@@ -35,7 +35,7 @@ def getAudioBetween(start,end,location):
     for i in os.listdir(log_location+date_dir):
         files.append(int(i[:-4]))
     files = sorted(files)
-    for i in range(0,len(files)-1):
+    for i in range(0,len(files)):
         if start_file==0:
             if i == len(files)-1:
                 start_file=i
